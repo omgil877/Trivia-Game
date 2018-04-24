@@ -75,9 +75,86 @@ var game = {
 		} else {
 			setTimeout(this.nextQuestions, 3 + 1000);
 		}
-	}
+	},
 
+	results: function() {
+
+	clearInterval(window.timer);
+
+	panel.html("<h2> Here are your result!<h2>");
+
+	$("counter-number").html(this.counter);
+
+	panel.append("<h3>correct answers: " + this.correct + "<h3>");
+	panel.append("<h3> Incorrect answers: " + this.incorrect + "<h3>");
+	panel.append("<Unanswered: " + (questions.legnth + (this.incorect + this.correct)) + "<h3>");
+	panel.append("<br> <buttton id+'start Over?<button>");
+	
+
+},
+
+	clicked: function(e) {
+		clearInterval(window.timer)
+		if ($(e.target).attr("data-name") === questions[this.currentQuestions].correctAnswer)
+	} 
+		else {
+			this.answeredCorrect();
+		}
+	},
+
+	answeredIncorrectly: function() {
+
+		this.incorrect ++;
+
+		clearInterval(window.timer);
+
+		panel.html("<h2>Nope!</h2>");
+		panel.append("<h3> the corect answer was: " + questions[this.currentQuestions].correctAnswer + "</h3>");
+		panel.append("<img scr='" + questions[this.currentQuestions].img + " />");
+	}
+		if (this.currentQuestion === questions.length - 1) {
+			setTime(this.results.bind(this), 3 + 1000);
+		} else {
+			setTime(this.nextQuestions.bind(this), 3 + 1000);
+		}
+},
+
+	answeredIncorrectly: function() {
+
+		this.incorrect ++;
+
+		clearInterval(window.timer);
+
+		panel.html("<h2>Correct!</h2>");
+	}	panel.append("<img scr='" + questions[this.currentQuestions].img + " />");
+
+		if (this.currentQuestion === questions.length - 1) {
+			setTime(this.results.bind(this), 3 + 1000);
+		} else {
+			setTime(this.nextQuestions.bind(this), 3 + 1000);
+		}
+	},
+
+	reset: function() {
+		this.currentQuestion = 0;
+		this.counter = countStartNumber;
+		this.correct = 0;
+		this.incorrect = 0;
+		this.loadQuestions();
+
+
+	}
 };
 
 
+
 // click events 
+$(document).on("click", "#start-over", game.reset.bind(game));
+$(document).on("click", ".answer-button", function(e) {
+	game.clicked.bind(game, e)()
+});
+
+$(document).on("click", "#start", function() {
+	$("#sun-wrapper").append("<h2>Time Remaining: <span id='counter'>30</span> seconds </h2>");
+	game.loadQuestion.bind(game)();
+});
