@@ -5,15 +5,16 @@ body {
 
 body {
   text-align: center;
-  background-image: url("../images/tacky.jpg");
+  background-image: url("https://i.ytimg.com/vi/7FBqWihzKTM/maxresdefault.jpg");
 }
 
 #wrapper {
-  width: 960px;
-  height: 95%;
+  width: 870px;
+  height: 80%;
   box-sizing: border-box;
   margin: 2.5% auto;
-  background-color: #6aa053;
+  background-color: #e0ae3a;
+  opacity: 0.8;
 }
 
 #sub-wrapper {
@@ -41,7 +42,7 @@ h1 {
   font-family: Geo, sans-serif;
   font-size: 6.5em;
   font-weight: bold;
-  color: blue;
+  color: white;
 }
 
 h2 {
@@ -56,11 +57,11 @@ h3 {
 
 #start {
   margin-top: 10%;
-  background: pink;
+  background: white;
   border: 2px solid blue;
 }
 
 button:hover {
-  background: pink;
+  background: white;
   border: 2px solid blue;
 }

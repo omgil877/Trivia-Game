@@ -4,45 +4,20 @@ var countStartNumber = 30;
 
 // Question set
 var questions = [{
-  question: "What was the first full length CGI movie?",
-  answers: ["A Bug's Life", "Monsters Inc.", "Toy Story", "The Lion King"],
-  correctAnswer: "Toy Story",
-  image: "assets/images/toystory.gif"
+  question: "what is the fastes production car in the world?",
+  answers: ["Nissan GTR", "Bugatti Chiron", "HENNESSEY VENOM F5", "Ferrari F40"],
+  correctAnswer: "HENNESSEY VENOM F5",
+  image: "assets/images/hennessey-venom.jpg"
 }, {
-  question: "Which of these is NOT a name of one of the Spice Girls?",
-  answers: ["Sporty Spice", "Fred Spice", "Scary Spice", "Posh Spice"],
-  correctAnswer: "Fred Spice",
-  image: "assets/images/spicegirls.gif"
+  question: "What car has a boxer engine?",
+  answers: ["Mitsubishi Lancer", "Nissan Sky-line", "Mazda Rx-7", "Subaru WRX"],
+  correctAnswer: "Subaru WRX",
+  image: "assets/images/2018-Subaru-WRX-STI-front-side-view-from-above.jpg"
 }, {
-  question: "Which NBA team won the most titles in the 90s?",
-  answers: ["New York Knicks", "Portland Trailblazers", "Los Angeles Lakers", "Chicago Bulls"],
-  correctAnswer: "Chicago Bulls",
-  image: "assets/images/bulls.gif"
-}, {
-  question: "Which group released the hit song, 'Smells Like Teen Spirit'?",
-  answers: ["Nirvana", "Backstreet Boys", "The Offspring", "No Doubt"],
-  correctAnswer: "Nirvana",
-  image: "assets/images/nirvanabark.gif"
-}, {
-  question: "Which popular Disney movie featured the song, \"Circle of Life\"?",
-  answers: ["Aladdin", "Hercules", "Mulan", "The Lion King"],
-  correctAnswer: "The Lion King",
-  image: "assets/images/lionking.gif"
-}, {
-  question: "Finish this line from the Fresh Prince of Bel-Air theme song: \"I whistled for a cab and when it came near, the license plate said...\"",
-  answers: ["Dice", "Mirror", "Fresh", "Cab"],
-  correctAnswer: "Fresh",
-  image: "assets/images/fresh.gif"
-}, {
-  question: "What was Doug's best friend's name?",
-  answers: ["Skeeter", "Mark", "Zach", "Cody"],
-  correctAnswer: "Skeeter",
-  image: "assets/images/skeeter.gif"
-}, {
-  question: "What was the name of the principal at Bayside High in Saved By The Bell?",
-  answers: ["Mr.Zhou", "Mr.Driggers", "Mr.Belding", "Mr.Page"],
-  correctAnswer: "Mr.Belding",
-  image: "assets/images/belding.gif"
+  question: "What company car is giving Tesla a hard time as of 2018?",
+  answers: ["Tesla truck", "Model 3", "Model S", "Model X"],
+  correctAnswer: "Model 3",
+  image: "assets/images/03TESLA1-superJumbo.jpg"
 }];
 
 // Variable to hold our setInterval
